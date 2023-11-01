@@ -18,7 +18,8 @@
 
         <nav class="menu">
             <a href="#" onclick="openScore()">Home</a>
-            <a href="#" onclick="openCadastro()">Add Erro</a>
+            <a href="#" onclick="openErro()">Add Erro</a>
+            <a href="#" onclick="openAcerto()">Add Acerto</a>
         </nav>
 
     </header>
@@ -73,8 +74,8 @@
             </div>
 
 
-            <div class="cadastro" id="cadastro">
-                <form action="#" method="post">
+            <div class="cadastroErro" id="cadastroErro">
+                <form action="#" method="post" id="formErro">
 
                     <div class="title">
                         Error
@@ -103,6 +104,42 @@
 
                     <div class="btn">
                         <input class="btn-submit" type="submit" value="Enviar" onclick="addError()">
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div class="cadastroAcerto" id="cadastroAcerto">
+                <form action="#" method="post" id="formAcerto">
+
+                    <div class="title">
+                        Acerto
+                    </div>
+
+                    <hr>
+
+                    <div class="select">
+                        <label for="idnome"><i class="bi bi-person-fill"></i></label> <br>
+                        <select name="nome" id="idnome">
+                            <option value="none">- Selecione -</option>
+                            <option value="douglas">Douglas</option>
+                            <option value="derick">Derick</option>
+                            <option value="rob">Rob</option>
+                            <option value="rafa">Rafa</option>
+                            <option value="raul">Raul</option>
+                            <option value="eduardo">Eduardo</option>
+                            <option value="gustavo">Gustavo</option>
+                        </select>
+                    </div>
+
+                    <div class="descri">
+                        <label for="iddescri"><i class="bi bi-code"></i></label> <br>
+                        <textarea name="descri" id="iddescri" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="btn">
+                        <input class="btn-submit" type="submit" value="Enviar" onclick="addAcerto()">
                     </div>
 
                 </form>
