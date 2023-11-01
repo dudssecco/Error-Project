@@ -8,25 +8,53 @@ select.addEventListener('change', function(){
 })
 
 
+
+
+
+
+
+
 function addError(){
 
     openScore()
    
 }
 
+function addAcerto(){
+
+    openScore()
+    
+}
+
+
+
+
+
+
+
+
 
 function openScore(){
 
-    cadastro.style.display = 'none'
+    cadastroErro.style.display = 'none'
+    cadastroAcerto.style.display = 'none'
     score.style.display = 'block'
 
 }
 
-function openCadastro(){
+function openErro(){
 
     score.style.display = 'none'
-    cadastro.style.display = 'block'
+    cadastroAcerto.style.display = 'none'
+    cadastroErro.style.display = 'block'
 
+}
+
+function openAcerto(){
+
+    score.style.display = 'none'
+    cadastroErro.style.display = 'none'
+    cadastroAcerto.style.display = 'block'
 }
    
 
