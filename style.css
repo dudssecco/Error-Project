@@ -1,117 +1,201 @@
 @charset "UTF-8";
-@import url('https://fonts.cdnfonts.com/css/lt-neo');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    width: 100vw;
     height: 200vh;
-    font-family: 'LT Neo', sans-serif;
-                                                
+    font-family: 'Poppins', sans-serif;
 }
 
-div.head{
+
+/* Header */
+
+header{
+    width: 100vw;
+    height: 80px;
+    padding-inline: 100px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-span.title{
-    font-size: 30px;
-    color: white;
+.logo{
+    font-size: 1.4em;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu a{
+    padding-inline: 20px;
+    font-size: 1.2em;
+    color: black;
+    text-decoration: none;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu */
+
+.container{
+    background-color: transparent;
+    margin: 100px auto;
+    width: 600px;
+    height: 770px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: block;
+}
+
+/* Score */
+
+.icons{
+    font-size: 1.5em;
+    font-weight: 600;
+    padding-inline: 50px;
+    padding-top: 20px;
+    margin-bottom: 25px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+#icon-person{
+    margin-left: 35px;
+}
+
+#icon-check{
+    margin-left: 145px;
+}
+
+#icon-x{
+    margin-left: 110px;
 }
 
 hr{
-    width: 700px;
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.525);
-    border-radius: 10%;
+    border: 1px solid rgba(0, 0, 0, 0.639);
+    margin: 10px auto 50px auto;
 }
 
-div.container{
-    background-color: transparent;
-    max-width: 800px;
-    height: 1100px;
-    margin: auto;
-    padding: 10px;
-    padding-top: 50px;
-}
-
-div.box-person{
-    background-color: rgba(255, 255, 255, 0.176);
-    margin: 20px auto;
-    width: 750px;
-    height: 120px;
+.user{
     display: flex;
     align-items: center;
-    border-radius: 20px;
-    display: flex;
     justify-content: space-around;
-    
+    font-size: 1.2em;
+    padding-bottom: 50px;
 }
 
-div.name{
-    background-color: transparent;
-    width: 150px;
+span.nome-user{
+    width: 100px;
     text-align: center;
-    font-size: 30px;
-    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
-div.acerto{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-div.erro{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-input{
-    width: 50px;
-    padding: 10px;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 15px;
-    border-style: none;
-    margin-right: 10px;
-    background-color: transparent;
-    color: white;
-}
-
-button.btn{
+input[type="number"]{
+    border: none;
     width: 40px;
     height: 40px;
-    border-radius: 10px;
-    margin-right: 5px;
+    text-align: center;
+    font-size: 1.2em;
     background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: black;
 }
 
-button.btn:hover{
-    background-color: rgba(255, 255, 255, 0.323);
-    transition: 0.5s;
-}
-
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
+.score{
+    display: block;
+}
+
+/* Cadastro */
+
+.cadastro{
+    display: none;
+}
+
+.title{
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.select{
+    text-align: center;
+    padding: 10px;
+    margin-top: 75px;
+}
+
+.select label{
+    font-size: 2em;
+}
+
+select{
+    font-size: 1em;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    background-color: white;
+    border-color: rgb(131, 131, 131);
+}
+
+.descri{
+    text-align: center;
+    padding: 10px;
+    padding-top: 50px;
+}
+
+.descri label{
+    font-size: 2em;
+}
+
+.descri textarea{
+    width: 400px;
+    height: 200px;
+    font-size: 1.2em;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.btn{
+    text-align: center;
+    padding: 15px;
+    padding-top: 100px;
+}
+
+.btn input{
+    font-size: 1em;
+    font-weight: 400;
+    width: 170px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn input:hover{
+    scale: 1.05;
+}
