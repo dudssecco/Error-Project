@@ -124,9 +124,15 @@ input[type=number]::-webkit-outer-spin-button {
     display: block;
 }
 
-/* Cadastro */
 
-.cadastro{
+
+
+
+
+
+/* Erro */
+
+.cadastroErro{
     display: none;
 }
 
@@ -198,4 +204,11 @@ select{
 
 .btn input:hover{
     scale: 1.05;
+}
+
+/* Acerto */
+
+
+.cadastroAcerto{
+    display: none;
 }
