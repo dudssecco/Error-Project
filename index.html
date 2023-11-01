@@ -10,136 +10,108 @@
 </head>
 
 <body>
-    <div class="container">
+    <header>
 
-        <div class="head">
-            <span class="title" id="nametitle">Nome</span>
-            <span class="title" id="acertotitle">Acerto</span>
-            <span class="title" id="errotitle">Erro</span>
+        <div class="logo">
+            Error iBridge
         </div>
 
-        <hr>
+        <nav class="menu">
+            <a href="#" onclick="openScore()">Home</a>
+            <a href="#" onclick="openCadastro()">Add Erro</a>
+        </nav>
 
-        <div class="box-person">
-            <div class="name">
-                Douglas
+    </header>
+    <main>
+
+        <div class="container">
+
+            <div class="score" id="score">
+                <div class="icons">
+                    <span class="icon" id="icon-person"><i class="bi bi-person-fill"></i></span>
+                    <span class="icon" id="icon-check"><i class="bi bi-check-circle"></i></span>
+                    <span class="icon" id="icon-x"><i class="bi bi-x-circle"></i></span>
+                </div>
+                <hr>
+                <div class="user">
+                    <span class="nome-user">Douglas</span>
+                    <input type="number" name="acertodouglas" id="idacertodouglas" disabled placeholder="0">
+                    <input type="number" name="errodouglas" id="iderrodouglas" disabled placeholder="0">
+                </div>
+                <div class="user">
+                   <span class="nome-user">Derick</span>
+                   <input type="number" name="acertodouglas" id="idacertoderick" disabled placeholder="0">
+                   <input type="number" name="errodouglas" id="iderroderick" disabled placeholder="0">
+                           </div>
+                
+                           <div class="user">
+                   <span class="nome-user">Rob</span>
+                   <input type="number" name="acertodouglas" id="idacertorob" disabled placeholder="0">
+                   <input type="number" name="errodouglas" id="iderrorob" disabled placeholder="0">
+                           </div>
+                
+                           <div class="user">
+                    <span class="nome-user">Rafa</span>
+                    <input type="number" name="acertodouglas" id="idacertorafa" disabled placeholder="0">
+                    <input type="number" name="errodouglas" id="iderrorafa" disabled placeholder="0">
+                </div>
+                <div class="user">
+                    <span class="nome-user">Raul</span>
+                    <input type="number" name="acertodouglas" id="idacertoraul" disabled placeholder="0">
+                    <input type="number" name="errodouglas" id="iderroraul" disabled placeholder="0">
+                </div>
+                <div class="user">
+                    <span class="nome-user">Eduardo</span>
+                    <input type="number" name="acertodouglas" id="idacertodudu" disabled placeholder="0">
+                    <input type="number" name="errodouglas" id="iderrodudu" disabled placeholder="0">
+                </div>
+                <div class="user">
+                    <span class="nome-user">Gustavo</span>
+                    <input type="number" name="acertodouglas" id="idacertogus" disabled placeholder="0">
+                    <input type="number" name="errodouglas" id="iderrogus" disabled placeholder="0">
+                </div>
             </div>
 
-            <div class="acerto">
-                <input type="number" name="adouglas" id="iadouglas">
-                <button class="btn" onclick="AddAcertoDouglas()">+</button>
-                <button class="btn" onclick="RemoveAcertoDouglas()">-</button>
+
+            <div class="cadastro" id="cadastro">
+                <form action="#" method="post">
+
+                    <div class="title">
+                        Error
+                    </div>
+
+                    <hr>
+
+                    <div class="select">
+                        <label for="idnome"><i class="bi bi-person-fill"></i></label> <br>
+                        <select name="nome" id="idnome">
+                            <option value="none">- Selecione -</option>
+                            <option value="douglas">Douglas</option>
+                            <option value="derick">Derick</option>
+                            <option value="rob">Rob</option>
+                            <option value="rafa">Rafa</option>
+                            <option value="raul">Raul</option>
+                            <option value="eduardo">Eduardo</option>
+                            <option value="gustavo">Gustavo</option>
+                        </select>
+                    </div>
+
+                    <div class="descri">
+                        <label for="iddescri"><i class="bi bi-code"></i></label> <br>
+                        <textarea name="descri" id="iddescri" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="btn">
+                        <input class="btn-submit" type="submit" value="Enviar" onclick="addError()">
+                    </div>
+
+                </form>
             </div>
 
-            <div class="erro">
-                <input type="number" name="edouglas" id="iedouglas">
-                <button class="btn" onclick="AddErroDouglas()">+</button>
-            </div>
+
         </div>
 
-        <div class="box-person">
-            <div class="name">
-                Derick
-            </div>
-
-            <div class="acerto">
-                <input type="number" name="aderick" id="iaderick">
-                <button class="btn" onclick="AddAcertoDerick()">+</button>
-                <button class="btn" onclick="RemoveAcertoDerick()">-</button>
-            </div>
-
-            <div class="erro">
-                <input type="number" name="ederick" id="iederick">
-                <button class="btn" onclick="AddErroDerick()">+</button>
-            </div>
-        </div>
-
-        <div class="box-person">
-            <div class="name">
-                Rafa
-            </div>
-
-            <div class="acerto">
-                <input type="number" name="arafa" id="iarafa">
-                <button class="btn" onclick="AddAcertoRafa()">+</button>
-                <button class="btn" onclick="RemoveAcertoRafa()">-</button>
-            </div>
-
-            <div class="erro">
-                <input type="number" name="erafa" id="ierafa">
-                <button class="btn" onclick="AddErroRafa()">+</button>
-            </div>
-        </div>
-
-        <div class="box-person">
-            <div class="name">
-                Raul
-            </div>
-
-            <div class="acerto">
-                <input type="number" name="araul" id="iaraul">
-                <button class="btn" onclick="AddAcertoRaul()">+</button>
-                <button class="btn" onclick="RemoveAcertoRaul()">-</button>
-            </div>
-
-            <div class="erro">
-                <input type="number" name="eraul" id="ieraul">
-                <button class="btn" onclick="AddErroRaul()">+</button>
-            </div>
-        </div>
-
-        <div class="box-person">
-            <div class="name">
-                Robson
-            </div>
-
-            <div class="acerto">
-                <input type="number" name="arobson" id="iarobson">
-                <button class="btn" onclick="AddAcertoRobson()">+</button>
-                <button class="btn" onclick="RemoveAcertoRobson()">-</button>
-            </div>
-
-            <div class="erro">
-                <input type="number" name="erobson" id="ierobson">
-                <button class="btn" onclick="AddErroRobson()">+</button>
-            </div>
-        </div>
-
-        <div class="box-person">
-            <div class="name">
-                Eduardo
-            </div>
-
-            <div class="acerto">
-                <input type="number" name="aeduardo" id="iaeduardo">
-                <button class="btn" onclick="AddAcertoEduardo()">+</button>
-                <button class="btn" onclick="RemoveAcertoEduardo()">-</button>
-            </div>
-
-            <div class="erro">
-                <input type="number" name="eeduardo" id="ieeduardo">
-                <button class="btn" onclick="AddErroEduardo()">+</button>
-            </div>
-        </div>
-
-        <div class="box-person">
-            <div class="name">
-                Gustavo
-            </div>
-
-            <div class="acerto">
-                <input type="number" name="agustavo" id="iagustavo">
-                <button class="btn" onclick="AddAcertoGustavo()">+</button>
-                <button class="btn" onclick="RemoveAcertoGustavo()">-</button>
-            </div>
-
-            <div class="erro">
-                <input type="number" name="egustavo" id="iegustavo">
-                <button class="btn" onclick="AddErroGustavo()">+</button>
-            </div>
-        </div>
-
-    </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
